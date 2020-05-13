@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_user_executives",
+  "info": {
+    "name": "executive",
+    "icon": "user-nurse"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "email": {
+      "type": "email"
+    },
+    "contactNumber": {
+      "type": "string"
+    }
+  }
+}

@@ -1,18 +1,18 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "school",
   "info": {
-    "name": "article"
+    "name": "school"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
-    "content": {
+    "description": {
       "type": "richtext"
     },
     "image": {
@@ -26,12 +26,30 @@
       "plugin": "upload",
       "required": false
     },
-    "published_at": {
-      "type": "date"
+    "articles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "article.school"
     },
-    "category": {
-      "model": "category",
-      "via": "articles"
+    "principalName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "pocName": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "scholarships": {
+      "via": "schools",
+      "collection": "scholarship",
+      "dominant": true
+    },
+    "address": {
+      "type": "text"
     }
   }
 }

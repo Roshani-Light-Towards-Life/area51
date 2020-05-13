@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_user_users",
+  "info": {
+    "name": "student",
+    "icon": "user-alt"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "contactNumber": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "address": {
+      "type": "text"
+    }
+  }
+}

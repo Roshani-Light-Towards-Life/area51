@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/scholarships",
+      "handler": "scholarship.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/scholarships/count",
+      "handler": "scholarship.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/scholarships/:id",
+      "handler": "scholarship.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/scholarships",
+      "handler": "scholarship.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/scholarships/:id",
+      "handler": "scholarship.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/scholarships/:id",
+      "handler": "scholarship.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

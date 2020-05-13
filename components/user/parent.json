@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_user_parents",
+  "info": {
+    "name": "parent",
+    "icon": "user-tie"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "contactNumber": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_school_schools",
+  "info": {
+    "name": "article",
+    "icon": "file-signature"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "published_at": {
+      "type": "date"
+    }
+  }
+}
