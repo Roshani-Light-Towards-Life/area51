@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scholarship_s",
+  "info": {
+    "name": "scholarship"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "integer"
+    },
+    "student": {
+      "model": "student",
+      "via": "scholarships"
+    },
+    "schools": {
+      "via": "scholarships",
+      "collection": "school"
+    },
+    "article": {
+      "type": "component",
+      "repeatable": false,
+      "component": "article.article",
+      "required": true
+    }
+  }
+}

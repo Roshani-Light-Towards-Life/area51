@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_centers",
+  "info": {
+    "name": "trainingCenter"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "richtext"
+    },
+    "contactNumber": {
+      "type": "string"
+    },
+    "leadManager": {
+      "type": "string"
+    },
+    "activities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "activity.activity"
+    },
+    "executives": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.executive"
+    }
+  }
+}

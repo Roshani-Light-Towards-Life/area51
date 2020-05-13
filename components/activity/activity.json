@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_activity_activities",
+  "info": {
+    "name": "activity",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "POC": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.user"
+    }
+  }
+}
