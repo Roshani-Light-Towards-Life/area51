@@ -532,7 +532,10 @@
           },
           "student": {
             "required": [
-              "id"
+              "id",
+              "info",
+              "mother",
+              "father"
             ],
             "properties": {
               "id": {
@@ -552,6 +555,15 @@
               },
               "father": {
                 "type": "component"
+              },
+              "school": {
+                "type": "string"
+              },
+              "class": {
+                "type": "string"
+              },
+              "rank": {
+                "type": "string"
               }
             }
           },
@@ -564,7 +576,8 @@
                 "principalName",
                 "address",
                 "email",
-                "phoneNumber"
+                "phoneNumber",
+                "POC"
               ],
               "properties": {
                 "id": {
@@ -599,6 +612,15 @@
                 },
                 "article": {
                   "type": "component"
+                },
+                "POC": {
+                  "type": "component"
+                },
+                "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -686,6 +708,50 @@
               },
               "published_at": {
                 "type": "string"
+              }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "scholarships": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "ranks": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "rank": {
+                  "type": "string"
+                },
+                "scholarships": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -796,6 +862,18 @@
               "published_at": {
                 "type": "string"
               }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ranks": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           }
         }

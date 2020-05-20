@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/students": {
+    "/ranks": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Student"
+                    "$ref": "#/components/schemas/Rank"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Student"
+          "Rank"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Student"
+                  "$ref": "#/components/schemas/Rank"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Student"
+          "Rank"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStudent"
+                "$ref": "#/components/schemas/NewRank"
               }
             }
           }
         }
       }
     },
-    "/students/count": {
+    "/ranks/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Student"
+          "Rank"
         ],
         "parameters": []
       }
     },
-    "/students/{id}": {
+    "/ranks/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Student"
+                  "$ref": "#/components/schemas/Rank"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Student"
+          "Rank"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Student"
+                  "$ref": "#/components/schemas/Rank"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Student"
+          "Rank"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStudent"
+                "$ref": "#/components/schemas/NewRank"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Student"
+          "Rank"
         ],
         "parameters": [
           {
@@ -514,15 +514,15 @@
   },
   "components": {
     "schemas": {
-      "Student": {
+      "Rank": {
         "required": [
-          "id",
-          "info",
-          "mother",
-          "father"
+          "id"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "rank": {
             "type": "string"
           },
           "scholarships": {
@@ -569,387 +569,19 @@
                 }
               }
             }
-          },
-          "info": {
-            "type": "object",
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "string"
-              },
-              "bio": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  }
-                }
-              },
-              "birthDate": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              }
-            }
-          },
-          "mother": {
-            "type": "object",
-            "required": [
-              "id",
-              "name",
-              "contactNumber"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "string"
-              }
-            }
-          },
-          "father": {
-            "type": "object",
-            "required": [
-              "id",
-              "name",
-              "contactNumber"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "string"
-              }
-            }
-          },
-          "school": {
-            "required": [
-              "id",
-              "name",
-              "principalName",
-              "address",
-              "email",
-              "phoneNumber",
-              "POC"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "principalName": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "phoneNumber": {
-                "type": "integer"
-              },
-              "scholarships": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "article": {
-                "type": "component"
-              },
-              "POC": {
-                "type": "component"
-              },
-              "students": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "class": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "scholarships": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "rank": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "rank": {
-                "type": "string"
-              },
-              "scholarships": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
-      "NewStudent": {
-        "required": [
-          "info",
-          "mother",
-          "father"
-        ],
+      "NewRank": {
         "properties": {
+          "rank": {
+            "type": "string"
+          },
           "scholarships": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "info": {
-            "type": "object",
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "string"
-              },
-              "bio": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  }
-                }
-              },
-              "birthDate": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              }
-            }
-          },
-          "mother": {
-            "type": "object",
-            "required": [
-              "id",
-              "name",
-              "contactNumber"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "string"
-              }
-            }
-          },
-          "father": {
-            "type": "object",
-            "required": [
-              "id",
-              "name",
-              "contactNumber"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "string"
-              }
-            }
-          },
-          "school": {
-            "type": "string"
-          },
-          "class": {
-            "type": "string"
-          },
-          "rank": {
-            "type": "string"
           }
         }
       }
@@ -957,7 +589,7 @@
   },
   "tags": [
     {
-      "name": "Student"
+      "name": "Rank"
     }
   ]
 }

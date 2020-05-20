@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "scholarship_s",
+  "collectionName": "scholarships",
   "info": {
     "name": "scholarship"
   },
@@ -21,14 +21,26 @@
       "via": "scholarships"
     },
     "schools": {
-      "via": "scholarships",
-      "collection": "school"
+      "collection": "school",
+      "via": "scholarships"
     },
     "article": {
       "type": "component",
       "repeatable": false,
       "component": "article.article",
       "required": true
+    },
+    "classes": {
+      "unique": true,
+      "collection": "class",
+      "via": "scholarships",
+      "dominant": true
+    },
+    "ranks": {
+      "unique": true,
+      "collection": "rank",
+      "via": "scholarships",
+      "dominant": true
     }
   }
 }

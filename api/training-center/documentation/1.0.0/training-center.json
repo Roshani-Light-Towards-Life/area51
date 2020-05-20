@@ -634,7 +634,8 @@
                     "type": "object",
                     "required": [
                       "id",
-                      "name"
+                      "name",
+                      "phoneNumber"
                     ],
                     "properties": {
                       "id": {
@@ -643,78 +644,11 @@
                       "name": {
                         "type": "string"
                       },
-                      "contactNumber": {
+                      "email": {
                         "type": "string"
                       },
-                      "bio": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "required": [
-                          "id",
-                          "name",
-                          "hash",
-                          "mime",
-                          "size",
-                          "url",
-                          "provider"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "alternativeText": {
-                            "type": "string"
-                          },
-                          "caption": {
-                            "type": "string"
-                          },
-                          "width": {
-                            "type": "integer"
-                          },
-                          "height": {
-                            "type": "integer"
-                          },
-                          "formats": {
-                            "type": "object"
-                          },
-                          "hash": {
-                            "type": "string"
-                          },
-                          "ext": {
-                            "type": "string"
-                          },
-                          "mime": {
-                            "type": "string"
-                          },
-                          "size": {
-                            "type": "number"
-                          },
-                          "url": {
-                            "type": "string"
-                          },
-                          "previewUrl": {
-                            "type": "string"
-                          },
-                          "provider": {
-                            "type": "string"
-                          },
-                          "provider_metadata": {
-                            "type": "object"
-                          },
-                          "related": {
-                            "type": "string"
-                          }
-                        }
-                      },
-                      "birthDate": {
-                        "type": "string"
-                      },
-                      "address": {
-                        "type": "string"
+                      "phoneNumber": {
+                        "type": "integer"
                       }
                     }
                   }
@@ -915,7 +849,8 @@
                     "type": "object",
                     "required": [
                       "id",
-                      "name"
+                      "name",
+                      "phoneNumber"
                     ],
                     "properties": {
                       "id": {
@@ -924,78 +859,11 @@
                       "name": {
                         "type": "string"
                       },
-                      "contactNumber": {
+                      "email": {
                         "type": "string"
                       },
-                      "bio": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "required": [
-                          "id",
-                          "name",
-                          "hash",
-                          "mime",
-                          "size",
-                          "url",
-                          "provider"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "alternativeText": {
-                            "type": "string"
-                          },
-                          "caption": {
-                            "type": "string"
-                          },
-                          "width": {
-                            "type": "integer"
-                          },
-                          "height": {
-                            "type": "integer"
-                          },
-                          "formats": {
-                            "type": "object"
-                          },
-                          "hash": {
-                            "type": "string"
-                          },
-                          "ext": {
-                            "type": "string"
-                          },
-                          "mime": {
-                            "type": "string"
-                          },
-                          "size": {
-                            "type": "number"
-                          },
-                          "url": {
-                            "type": "string"
-                          },
-                          "previewUrl": {
-                            "type": "string"
-                          },
-                          "provider": {
-                            "type": "string"
-                          },
-                          "provider_metadata": {
-                            "type": "object"
-                          },
-                          "related": {
-                            "type": "string"
-                          }
-                        }
-                      },
-                      "birthDate": {
-                        "type": "string"
-                      },
-                      "address": {
-                        "type": "string"
+                      "phoneNumber": {
+                        "type": "integer"
                       }
                     }
                   }

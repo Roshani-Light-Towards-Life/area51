@@ -16,17 +16,33 @@
     "info": {
       "type": "component",
       "repeatable": false,
-      "component": "user.user"
+      "component": "user.user",
+      "required": true
     },
     "mother": {
       "type": "component",
       "repeatable": false,
-      "component": "user.parent"
+      "component": "user.parent",
+      "required": true
     },
     "father": {
       "type": "component",
       "repeatable": false,
-      "component": "user.parent"
+      "component": "user.parent",
+      "required": true
+    },
+    "school": {
+      "unique": true,
+      "model": "school",
+      "via": "students"
+    },
+    "class": {
+      "unique": true,
+      "model": "class"
+    },
+    "rank": {
+      "unique": true,
+      "model": "rank"
     }
   }
 }

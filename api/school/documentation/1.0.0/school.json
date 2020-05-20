@@ -521,7 +521,8 @@
           "principalName",
           "address",
           "email",
-          "phoneNumber"
+          "phoneNumber",
+          "POC"
         ],
         "properties": {
           "id": {
@@ -571,6 +572,18 @@
                 },
                 "article": {
                   "type": "component"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "ranks": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -724,6 +737,71 @@
                 "type": "string"
               }
             }
+          },
+          "POC": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name",
+                "phoneNumber"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "phoneNumber": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "info",
+                "mother",
+                "father"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "scholarships": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "info": {
+                  "type": "component"
+                },
+                "mother": {
+                  "type": "component"
+                },
+                "father": {
+                  "type": "component"
+                },
+                "school": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "rank": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -733,7 +811,8 @@
           "principalName",
           "address",
           "email",
-          "phoneNumber"
+          "phoneNumber",
+          "POC"
         ],
         "properties": {
           "name": {
@@ -841,6 +920,37 @@
               "published_at": {
                 "type": "string"
               }
+            }
+          },
+          "POC": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name",
+                "phoneNumber"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "phoneNumber": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           }
         }

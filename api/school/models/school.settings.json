@@ -30,8 +30,8 @@
       "required": true
     },
     "scholarships": {
-      "collection": "scholarship",
       "via": "schools",
+      "collection": "scholarship",
       "dominant": true
     },
     "image": {
@@ -49,6 +49,16 @@
       "type": "component",
       "repeatable": false,
       "component": "article.article"
+    },
+    "POC": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "user.poc"
+    },
+    "students": {
+      "via": "school",
+      "collection": "student"
     }
   }
 }

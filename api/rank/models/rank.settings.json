@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ranks",
+  "info": {
+    "name": "rank"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "rank": {
+      "type": "string"
+    },
+    "scholarships": {
+      "via": "ranks",
+      "collection": "scholarship"
+    }
+  }
+}

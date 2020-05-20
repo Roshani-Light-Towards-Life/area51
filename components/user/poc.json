@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_user_pocs",
+  "info": {
+    "name": "poc",
+    "icon": "user-secret"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}
