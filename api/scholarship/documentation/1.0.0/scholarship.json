@@ -576,8 +576,7 @@
                 "principalName",
                 "address",
                 "email",
-                "phoneNumber",
-                "POC"
+                "phoneNumber"
               ],
               "properties": {
                 "id": {
@@ -613,14 +612,14 @@
                 "article": {
                   "type": "component"
                 },
-                "POC": {
-                  "type": "component"
-                },
                 "students": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "pocName": {
+                  "type": "string"
                 }
               }
             }
