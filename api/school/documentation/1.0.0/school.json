@@ -521,8 +521,7 @@
           "principalName",
           "address",
           "email",
-          "phoneNumber",
-          "POC"
+          "phoneNumber"
         ],
         "properties": {
           "id": {
@@ -738,31 +737,6 @@
               }
             }
           },
-          "POC": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "name",
-                "phoneNumber"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "phoneNumber": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
           "students": {
             "type": "array",
             "items": {
@@ -802,6 +776,9 @@
                 }
               }
             }
+          },
+          "pocName": {
+            "type": "string"
           }
         }
       },
@@ -811,8 +788,7 @@
           "principalName",
           "address",
           "email",
-          "phoneNumber",
-          "POC"
+          "phoneNumber"
         ],
         "properties": {
           "name": {
@@ -922,36 +898,14 @@
               }
             }
           },
-          "POC": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "name",
-                "phoneNumber"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "phoneNumber": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
           "students": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "pocName": {
+            "type": "string"
           }
         }
       }

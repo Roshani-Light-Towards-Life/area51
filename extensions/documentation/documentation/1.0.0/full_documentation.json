@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/20/2020 11:23:31 AM"
+    "x-generation-date": "05/20/2020 6:50:08 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5486,8 +5486,7 @@
                 "principalName",
                 "address",
                 "email",
-                "phoneNumber",
-                "POC"
+                "phoneNumber"
               ],
               "properties": {
                 "id": {
@@ -5523,14 +5522,14 @@
                 "article": {
                   "type": "component"
                 },
-                "POC": {
-                  "type": "component"
-                },
                 "students": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "pocName": {
+                  "type": "string"
                 }
               }
             }
@@ -5795,8 +5794,7 @@
           "principalName",
           "address",
           "email",
-          "phoneNumber",
-          "POC"
+          "phoneNumber"
         ],
         "properties": {
           "id": {
@@ -6012,31 +6010,6 @@
               }
             }
           },
-          "POC": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "name",
-                "phoneNumber"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "phoneNumber": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
           "students": {
             "type": "array",
             "items": {
@@ -6076,6 +6049,9 @@
                 }
               }
             }
+          },
+          "pocName": {
+            "type": "string"
           }
         }
       },
@@ -6085,8 +6061,7 @@
           "principalName",
           "address",
           "email",
-          "phoneNumber",
-          "POC"
+          "phoneNumber"
         ],
         "properties": {
           "name": {
@@ -6196,36 +6171,14 @@
               }
             }
           },
-          "POC": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "name",
-                "phoneNumber"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "phoneNumber": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
           "students": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "pocName": {
+            "type": "string"
           }
         }
       },
@@ -6424,8 +6377,7 @@
               "principalName",
               "address",
               "email",
-              "phoneNumber",
-              "POC"
+              "phoneNumber"
             ],
             "properties": {
               "id": {
@@ -6461,14 +6413,14 @@
               "article": {
                 "type": "component"
               },
-              "POC": {
-                "type": "component"
-              },
               "students": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "pocName": {
+                "type": "string"
               }
             }
           },

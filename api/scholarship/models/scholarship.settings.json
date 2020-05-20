@@ -21,8 +21,8 @@
       "via": "scholarships"
     },
     "schools": {
-      "collection": "school",
-      "via": "scholarships"
+      "via": "scholarships",
+      "collection": "school"
     },
     "article": {
       "type": "component",
