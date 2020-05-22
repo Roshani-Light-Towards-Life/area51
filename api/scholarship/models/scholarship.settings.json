@@ -17,8 +17,8 @@
       "type": "integer"
     },
     "student": {
-      "model": "student",
-      "via": "scholarships"
+      "via": "scholarships",
+      "model": "student"
     },
     "schools": {
       "via": "scholarships",
@@ -29,18 +29,6 @@
       "repeatable": false,
       "component": "article.article",
       "required": true
-    },
-    "classes": {
-      "unique": true,
-      "collection": "class",
-      "via": "scholarships",
-      "dominant": true
-    },
-    "ranks": {
-      "unique": true,
-      "collection": "rank",
-      "via": "scholarships",
-      "dominant": true
     }
   }
 }

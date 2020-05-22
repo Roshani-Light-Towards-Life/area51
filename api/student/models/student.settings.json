@@ -10,14 +10,8 @@
   },
   "attributes": {
     "scholarships": {
-      "via": "student",
-      "collection": "scholarship"
-    },
-    "info": {
-      "type": "component",
-      "repeatable": false,
-      "component": "user.user",
-      "required": true
+      "collection": "scholarship",
+      "via": "student"
     },
     "mother": {
       "type": "component",
@@ -32,16 +26,69 @@
       "required": true
     },
     "school": {
-      "via": "students",
-      "model": "school"
+      "model": "school",
+      "via": "students"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "birthDate": {
+      "type": "date"
     },
     "class": {
-      "unique": true,
-      "model": "class"
+      "type": "enumeration",
+      "enum": [
+        "PreNursery",
+        "Nursery",
+        "KG",
+        "LKG",
+        "UKG",
+        "One",
+        "Two",
+        "Third",
+        "Fourth",
+        "Fifth",
+        "Sixth",
+        "Seventh",
+        "Eighth",
+        "Ninth",
+        "Tenth",
+        "Eleventh",
+        "Twelfth"
+      ]
     },
-    "rank": {
-      "unique": true,
-      "model": "rank"
+    "classRank": {
+      "type": "enumeration",
+      "enum": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth",
+        "Fifth"
+      ],
+      "required": false
+    },
+    "schoolRank": {
+      "type": "enumeration",
+      "enum": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth",
+        "Fifth"
+      ]
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
