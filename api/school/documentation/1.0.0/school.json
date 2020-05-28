@@ -571,18 +571,6 @@
                 },
                 "article": {
                   "type": "component"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "ranks": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -742,9 +730,9 @@
             "items": {
               "required": [
                 "id",
-                "info",
                 "mother",
-                "father"
+                "father",
+                "name"
               ],
               "properties": {
                 "id": {
@@ -756,9 +744,6 @@
                     "type": "string"
                   }
                 },
-                "info": {
-                  "type": "component"
-                },
                 "mother": {
                   "type": "component"
                 },
@@ -768,10 +753,22 @@
                 "school": {
                   "type": "string"
                 },
+                "name": {
+                  "type": "string"
+                },
+                "birthDate": {
+                  "type": "string"
+                },
                 "class": {
                   "type": "string"
                 },
-                "rank": {
+                "classRank": {
+                  "type": "string"
+                },
+                "schoolRank": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "string"
                 }
               }

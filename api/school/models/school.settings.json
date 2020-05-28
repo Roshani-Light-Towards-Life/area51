@@ -51,8 +51,8 @@
       "component": "article.article"
     },
     "students": {
-      "collection": "student",
-      "via": "school"
+      "via": "school",
+      "collection": "student"
     },
     "pocName": {
       "type": "string"

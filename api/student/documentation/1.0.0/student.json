@@ -517,9 +517,9 @@
       "Student": {
         "required": [
           "id",
-          "info",
           "mother",
-          "father"
+          "father",
+          "name"
         ],
         "properties": {
           "id": {
@@ -554,107 +554,7 @@
                 },
                 "article": {
                   "type": "component"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "ranks": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
-              }
-            }
-          },
-          "info": {
-            "type": "object",
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "string"
-              },
-              "bio": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  }
-                }
-              },
-              "birthDate": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
               }
             }
           },
@@ -756,9 +656,63 @@
               }
             }
           },
+          "name": {
+            "type": "string"
+          },
+          "birthDate": {
+            "type": "string"
+          },
           "class": {
+            "type": "string",
+            "enum": [
+              "PreNursery",
+              "Nursery",
+              "KG",
+              "LKG",
+              "UKG",
+              "One",
+              "Two",
+              "Third",
+              "Fourth",
+              "Fifth",
+              "Sixth",
+              "Seventh",
+              "Eighth",
+              "Ninth",
+              "Tenth",
+              "Eleventh",
+              "Twelfth"
+            ]
+          },
+          "classRank": {
+            "type": "string",
+            "enum": [
+              "First",
+              "Second",
+              "Third",
+              "Fourth",
+              "Fifth"
+            ]
+          },
+          "schoolRank": {
+            "type": "string",
+            "enum": [
+              "First",
+              "Second",
+              "Third",
+              "Fourth",
+              "Fifth"
+            ]
+          },
+          "image": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
             ],
             "properties": {
               "id": {
@@ -767,30 +721,47 @@
               "name": {
                 "type": "string"
               },
-              "scholarships": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "rank": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
+              "alternativeText": {
                 "type": "string"
               },
-              "rank": {
+              "caption": {
                 "type": "string"
               },
-              "scholarships": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
               }
             }
           }
@@ -798,103 +769,15 @@
       },
       "NewStudent": {
         "required": [
-          "info",
           "mother",
-          "father"
+          "father",
+          "name"
         ],
         "properties": {
           "scholarships": {
             "type": "array",
             "items": {
               "type": "string"
-            }
-          },
-          "info": {
-            "type": "object",
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "string"
-              },
-              "bio": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  }
-                }
-              },
-              "birthDate": {
-                "type": "string"
-              },
-              "address": {
-                "type": "string"
-              }
             }
           },
           "mother": {
@@ -944,11 +827,53 @@
           "school": {
             "type": "string"
           },
-          "class": {
+          "name": {
             "type": "string"
           },
-          "rank": {
+          "birthDate": {
             "type": "string"
+          },
+          "class": {
+            "type": "string",
+            "enum": [
+              "PreNursery",
+              "Nursery",
+              "KG",
+              "LKG",
+              "UKG",
+              "One",
+              "Two",
+              "Third",
+              "Fourth",
+              "Fifth",
+              "Sixth",
+              "Seventh",
+              "Eighth",
+              "Ninth",
+              "Tenth",
+              "Eleventh",
+              "Twelfth"
+            ]
+          },
+          "classRank": {
+            "type": "string",
+            "enum": [
+              "First",
+              "Second",
+              "Third",
+              "Fourth",
+              "Fifth"
+            ]
+          },
+          "schoolRank": {
+            "type": "string",
+            "enum": [
+              "First",
+              "Second",
+              "Third",
+              "Fourth",
+              "Fifth"
+            ]
           }
         }
       }

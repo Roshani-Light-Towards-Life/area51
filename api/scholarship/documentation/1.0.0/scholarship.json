@@ -533,9 +533,9 @@
           "student": {
             "required": [
               "id",
-              "info",
               "mother",
-              "father"
+              "father",
+              "name"
             ],
             "properties": {
               "id": {
@@ -547,9 +547,6 @@
                   "type": "string"
                 }
               },
-              "info": {
-                "type": "component"
-              },
               "mother": {
                 "type": "component"
               },
@@ -559,10 +556,22 @@
               "school": {
                 "type": "string"
               },
+              "name": {
+                "type": "string"
+              },
+              "birthDate": {
+                "type": "string"
+              },
               "class": {
                 "type": "string"
               },
-              "rank": {
+              "classRank": {
+                "type": "string"
+              },
+              "schoolRank": {
+                "type": "string"
+              },
+              "image": {
                 "type": "string"
               }
             }
@@ -709,50 +718,6 @@
                 "type": "string"
               }
             }
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "scholarships": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "ranks": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "rank": {
-                  "type": "string"
-                },
-                "scholarships": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
           }
         }
       },
@@ -861,18 +826,6 @@
               "published_at": {
                 "type": "string"
               }
-            }
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "ranks": {
-            "type": "array",
-            "items": {
-              "type": "string"
             }
           }
         }
