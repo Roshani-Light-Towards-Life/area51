@@ -9,10 +9,6 @@
     "timestamps": true
   },
   "attributes": {
-    "scholarships": {
-      "collection": "scholarship",
-      "via": "student"
-    },
     "mother": {
       "type": "component",
       "repeatable": false,
@@ -26,8 +22,8 @@
       "required": true
     },
     "school": {
-      "model": "school",
-      "via": "students"
+      "via": "students",
+      "model": "school"
     },
     "name": {
       "type": "string",
@@ -89,6 +85,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "scholarship": {
+      "via": "students",
+      "model": "scholarship"
     }
   }
 }

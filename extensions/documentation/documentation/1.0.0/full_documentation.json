@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/22/2020 10:43:22 PM"
+    "x-generation-date": "06/03/2020 11:16:31 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4276,52 +4276,6 @@
           "year": {
             "type": "integer"
           },
-          "student": {
-            "required": [
-              "id",
-              "mother",
-              "father",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "scholarships": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "mother": {
-                "type": "component"
-              },
-              "father": {
-                "type": "component"
-              },
-              "school": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "birthDate": {
-                "type": "string"
-              },
-              "class": {
-                "type": "string"
-              },
-              "classRank": {
-                "type": "string"
-              },
-              "schoolRank": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              }
-            }
-          },
           "schools": {
             "type": "array",
             "items": {
@@ -4359,10 +4313,7 @@
                   }
                 },
                 "image": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "type": "string"
                 },
                 "article": {
                   "type": "component"
@@ -4374,328 +4325,6 @@
                   }
                 },
                 "pocName": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "article": {
-            "type": "object",
-            "required": [
-              "id",
-              "title",
-              "content"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "required": [
-                    "id",
-                    "name",
-                    "hash",
-                    "mime",
-                    "size",
-                    "url",
-                    "provider"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "alternativeText": {
-                      "type": "string"
-                    },
-                    "caption": {
-                      "type": "string"
-                    },
-                    "width": {
-                      "type": "integer"
-                    },
-                    "height": {
-                      "type": "integer"
-                    },
-                    "formats": {
-                      "type": "object"
-                    },
-                    "hash": {
-                      "type": "string"
-                    },
-                    "ext": {
-                      "type": "string"
-                    },
-                    "mime": {
-                      "type": "string"
-                    },
-                    "size": {
-                      "type": "number"
-                    },
-                    "url": {
-                      "type": "string"
-                    },
-                    "previewUrl": {
-                      "type": "string"
-                    },
-                    "provider": {
-                      "type": "string"
-                    },
-                    "provider_metadata": {
-                      "type": "object"
-                    },
-                    "related": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "content": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              }
-            }
-          }
-        }
-      },
-      "NewScholarship": {
-        "required": [
-          "name",
-          "article"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "year": {
-            "type": "integer"
-          },
-          "student": {
-            "type": "string"
-          },
-          "schools": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "article": {
-            "type": "object",
-            "required": [
-              "id",
-              "title",
-              "content"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "required": [
-                    "id",
-                    "name",
-                    "hash",
-                    "mime",
-                    "size",
-                    "url",
-                    "provider"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "alternativeText": {
-                      "type": "string"
-                    },
-                    "caption": {
-                      "type": "string"
-                    },
-                    "width": {
-                      "type": "integer"
-                    },
-                    "height": {
-                      "type": "integer"
-                    },
-                    "formats": {
-                      "type": "object"
-                    },
-                    "hash": {
-                      "type": "string"
-                    },
-                    "ext": {
-                      "type": "string"
-                    },
-                    "mime": {
-                      "type": "string"
-                    },
-                    "size": {
-                      "type": "number"
-                    },
-                    "url": {
-                      "type": "string"
-                    },
-                    "previewUrl": {
-                      "type": "string"
-                    },
-                    "provider": {
-                      "type": "string"
-                    },
-                    "provider_metadata": {
-                      "type": "object"
-                    },
-                    "related": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "content": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              }
-            }
-          }
-        }
-      },
-      "School": {
-        "required": [
-          "id",
-          "name",
-          "principalName",
-          "address",
-          "email",
-          "phoneNumber"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "principalName": {
-            "type": "string"
-          },
-          "address": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "phoneNumber": {
-            "type": "integer"
-          },
-          "scholarships": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "article"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                },
-                "student": {
-                  "type": "string"
-                },
-                "schools": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "article": {
-                  "type": "component"
-                }
-              }
-            }
-          },
-          "image": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
                   "type": "string"
                 }
               }
@@ -4800,11 +4429,376 @@
                 "id": {
                   "type": "string"
                 },
-                "scholarships": {
+                "mother": {
+                  "type": "component"
+                },
+                "father": {
+                  "type": "component"
+                },
+                "school": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "birthDate": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "classRank": {
+                  "type": "string"
+                },
+                "schoolRank": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "scholarship": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewScholarship": {
+        "required": [
+          "name",
+          "article"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "schools": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "article": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "content"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id",
+                    "name",
+                    "hash",
+                    "mime",
+                    "size",
+                    "url",
+                    "provider"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {
+                      "type": "object"
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {
+                      "type": "object"
+                    },
+                    "related": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "content": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              }
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "School": {
+        "required": [
+          "id",
+          "name",
+          "principalName",
+          "address",
+          "email",
+          "phoneNumber"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "principalName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "integer"
+          },
+          "scholarships": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "article"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "schools": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "article": {
+                  "type": "component"
+                },
+                "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
+          "article": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "content"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id",
+                    "name",
+                    "hash",
+                    "mime",
+                    "size",
+                    "url",
+                    "provider"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {
+                      "type": "object"
+                    },
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {
+                      "type": "object"
+                    },
+                    "related": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "content": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              }
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "mother",
+                "father",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
                 },
                 "mother": {
                   "type": "component"
@@ -4831,6 +4825,9 @@
                   "type": "string"
                 },
                 "image": {
+                  "type": "string"
+                },
+                "scholarship": {
                   "type": "string"
                 }
               }
@@ -4979,39 +4976,6 @@
           "id": {
             "type": "string"
           },
-          "scholarships": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "article"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                },
-                "student": {
-                  "type": "string"
-                },
-                "schools": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "article": {
-                  "type": "component"
-                }
-              }
-            }
-          },
           "mother": {
             "type": "object",
             "required": [
@@ -5091,10 +5055,7 @@
                 }
               },
               "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+                "type": "string"
               },
               "article": {
                 "type": "component"
@@ -5218,6 +5179,39 @@
                 "type": "string"
               }
             }
+          },
+          "scholarship": {
+            "required": [
+              "id",
+              "name",
+              "article"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "schools": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "article": {
+                "type": "component"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -5228,12 +5222,6 @@
           "name"
         ],
         "properties": {
-          "scholarships": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "mother": {
             "type": "object",
             "required": [
@@ -5328,6 +5316,9 @@
               "Fourth",
               "Fifth"
             ]
+          },
+          "scholarship": {
+            "type": "string"
           }
         }
       },

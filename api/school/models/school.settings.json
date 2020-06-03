@@ -35,7 +35,7 @@
       "dominant": true
     },
     "image": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -51,8 +51,8 @@
       "component": "article.article"
     },
     "students": {
-      "via": "school",
-      "collection": "student"
+      "collection": "student",
+      "via": "school"
     },
     "pocName": {
       "type": "string"
