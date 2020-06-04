@@ -530,52 +530,6 @@
           "year": {
             "type": "integer"
           },
-          "student": {
-            "required": [
-              "id",
-              "mother",
-              "father",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "scholarships": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "mother": {
-                "type": "component"
-              },
-              "father": {
-                "type": "component"
-              },
-              "school": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "birthDate": {
-                "type": "string"
-              },
-              "class": {
-                "type": "string"
-              },
-              "classRank": {
-                "type": "string"
-              },
-              "schoolRank": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              }
-            }
-          },
           "schools": {
             "type": "array",
             "items": {
@@ -613,10 +567,7 @@
                   }
                 },
                 "image": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "type": "string"
                 },
                 "article": {
                   "type": "component"
@@ -718,6 +669,52 @@
                 "type": "string"
               }
             }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "mother",
+                "father",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "mother": {
+                  "type": "component"
+                },
+                "father": {
+                  "type": "component"
+                },
+                "school": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "birthDate": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "classRank": {
+                  "type": "string"
+                },
+                "schoolRank": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "scholarship": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -732,9 +729,6 @@
           },
           "year": {
             "type": "integer"
-          },
-          "student": {
-            "type": "string"
           },
           "schools": {
             "type": "array",
@@ -826,6 +820,12 @@
               "published_at": {
                 "type": "string"
               }
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           }
         }

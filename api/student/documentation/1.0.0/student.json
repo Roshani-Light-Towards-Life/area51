@@ -525,39 +525,6 @@
           "id": {
             "type": "string"
           },
-          "scholarships": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "article"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                },
-                "student": {
-                  "type": "string"
-                },
-                "schools": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "article": {
-                  "type": "component"
-                }
-              }
-            }
-          },
           "mother": {
             "type": "object",
             "required": [
@@ -637,10 +604,7 @@
                 }
               },
               "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+                "type": "string"
               },
               "article": {
                 "type": "component"
@@ -764,6 +728,39 @@
                 "type": "string"
               }
             }
+          },
+          "scholarship": {
+            "required": [
+              "id",
+              "name",
+              "article"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "schools": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "article": {
+                "type": "component"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -774,12 +771,6 @@
           "name"
         ],
         "properties": {
-          "scholarships": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "mother": {
             "type": "object",
             "required": [
@@ -874,6 +865,9 @@
               "Fourth",
               "Fifth"
             ]
+          },
+          "scholarship": {
+            "type": "string"
           }
         }
       }

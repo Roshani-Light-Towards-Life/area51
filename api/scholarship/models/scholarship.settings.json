@@ -16,10 +16,6 @@
     "year": {
       "type": "integer"
     },
-    "student": {
-      "via": "scholarships",
-      "model": "student"
-    },
     "schools": {
       "via": "scholarships",
       "collection": "school"
@@ -29,6 +25,10 @@
       "repeatable": false,
       "component": "article.article",
       "required": true
+    },
+    "students": {
+      "collection": "student",
+      "via": "scholarship"
     }
   }
 }
