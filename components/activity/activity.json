@@ -27,6 +27,9 @@
       "type": "component",
       "repeatable": true,
       "component": "user.poc"
+    },
+    "eventDate": {
+      "type": "string"
     }
   }
 }
