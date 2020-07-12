@@ -1,16 +1,18 @@
-FROM node:10-alpine
+FROM strapi/base
 
-USER root
-ADD ./api ./api
-ADD ./components ./components
-ADD ./config ./config
-ADD ./extensions ./extensions
-ADD ./public ./public
-ADD ./package.json ./package.json
-RUN npm config set unsafe-perm true 
-RUN apk add python make gcc g++
-RUN npm install
+WORKDIR /app
+
+COPY ./package.json ./
+COPY ./yarn.lock ./
+
+RUN yarn install
+
+COPY . .
+
+ENV NODE_ENV production
+
 RUN yarn build
 
-EXPOSE 3000
-CMD yarn start
+EXPOSE 1337
+
+CMD ["yarn", "start"]
