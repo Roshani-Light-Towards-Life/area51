@@ -107,12 +107,8 @@ coverage
 # Strapi
 ############################
 
+.env
+license.txt
 exports
 .cache
 build
-
-
-############################
-# IntelliJ IDEA
-############################
-*.iml
